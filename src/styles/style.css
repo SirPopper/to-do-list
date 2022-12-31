@@ -1,3 +1,105 @@
-h1 {
-  color: red;
+:root {
+  --clr-primary: white;
+}
+
+body {
+  margin: 0;
+  font-family: lato, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  display: grid;
+  grid:
+    "header header header header" auto
+    "...... folder  tasks ......" auto/
+    1fr minmax(100px, 300px)
+    minmax(300px, 500px) 1fr;
+  gap: 2rem;
+}
+
+.header {
+  grid-area: header;
+
+  text-align: center;
+  padding: 1rem;
+  font-size: xx-large;
+  font-weight: 900;
+}
+
+.folder-container {
+  grid-area: folder;
+}
+
+.header-style {
+  padding: 0.5rem 0;
+  font-size: larger;
+  font-weight: 900;
+}
+
+.folder-item {
+  padding: 0.2rem 0;
+}
+
+.folder-item:hover {
+  font-size: large;
+  cursor: pointer;
+}
+
+.btn {
+  margin-top: 1rem;
+  border: none;
+  background: none;
+  padding: 0;
+
+  font-size: larger;
+}
+
+.btn:hover {
+  background: whitesmoke;
+}
+
+input {
+  margin-left: 0.5rem;
+}
+
+/* task container */
+
+.tasks-container {
+  grid-area: tasks;
+}
+
+.task-item {
+  padding: 0.5rem 0;
+}
+
+.task-item input {
+  margin: 0;
+}
+
+.task-item label {
+  margin-left: 1rem;
+}
+
+/* delete buttons */
+
+.tasks-btn-container {
+  margin-top: 1.5rem;
+}
+
+.btn-delete {
+  border: 1px solid grey;
+  border-radius: 3px;
+  background: 0;
+
+  margin: 0 1rem;
+  padding: 5px 15px;
+}
+
+.btn-delete:hover {
+  cursor: pointer;
+  background: #1e3a8a;
+  color: white;
+  border: 1px solid white;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
